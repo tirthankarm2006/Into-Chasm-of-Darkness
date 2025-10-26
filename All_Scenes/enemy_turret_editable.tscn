@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://dpj0devsp2130"]
+
+[ext_resource type="PackedScene" uid="uid://bgacjskf7qj6b" path="res://All_3D_Models/Enemy_Turret.fbx" id="1_q471n"]
+[ext_resource type="Shader" uid="uid://ced052xntbjui" path="res://All_Shaders/disable_cull_face.gdshader" id="2_bmj7r"]
+[ext_resource type="Texture2D" uid="uid://b74guv7aw8uxd" path="res://All_Textures/Sci_Fi_Panel_20_basecolor.jpg" id="3_j8blh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j8blh"]
+render_priority = 0
+shader = ExtResource("2_bmj7r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bmj7r"]
+render_priority = 0
+shader = ExtResource("2_bmj7r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c07i2"]
+render_priority = 0
+shader = ExtResource("2_bmj7r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c07i2"]
+albedo_texture = ExtResource("3_j8blh")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_asea5"]
+render_priority = 0
+shader = ExtResource("2_bmj7r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0lr3w"]
+render_priority = 0
+shader = ExtResource("2_bmj7r")
+
+[node name="Enemy_Turret" instance=ExtResource("1_q471n")]
+
+[node name="Blades" parent="." index="0"]
+surface_material_override/0 = SubResource("ShaderMaterial_j8blh")
+
+[node name="Blades_001" parent="." index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_bmj7r")
+
+[node name="Cube" parent="." index="2"]
+surface_material_override/0 = SubResource("ShaderMaterial_c07i2")
+
+[node name="Cube_001" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_c07i2")
+surface_material_override/0 = SubResource("ShaderMaterial_asea5")
+
+[node name="Plane" parent="." index="11"]
+surface_material_override/0 = SubResource("ShaderMaterial_0lr3w")

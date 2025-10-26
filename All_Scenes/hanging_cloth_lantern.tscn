@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2pa0kg1hl6kx"]
+
+[ext_resource type="ArrayMesh" uid="uid://bbkbvetxhoidp" path="res://All_3D_Models/cloth_lantern.obj" id="1_5dbt6"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_5dbt6"]
+emission_enabled = true
+emission = Color(1, 0.59607846, 0.32941177, 1)
+emission_energy_multiplier = 4.0
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 1.0
+subsurf_scatter_skin_mode = true
+subsurf_scatter_transmittance_enabled = true
+subsurf_scatter_transmittance_depth = 1.0
+subsurf_scatter_transmittance_boost = 1.0
+backlight_enabled = true
+backlight = Color(1, 0.59607846, 0.32941177, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ClothLantern" type="MeshInstance3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+mesh = ExtResource("1_5dbt6")
+surface_material_override/0 = SubResource("ORMMaterial3D_5dbt6")

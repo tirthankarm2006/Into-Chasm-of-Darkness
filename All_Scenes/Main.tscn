@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://3j1c31jgr3gv"]
+[gd_scene load_steps=7 format=3 uid="uid://3j1c31jgr3gv"]
 
 [ext_resource type="Shader" uid="uid://cpqnse5l1drgi" path="res://All_Shaders/Sky1.gdshader" id="1_iimck"]
+[ext_resource type="PackedScene" uid="uid://dpj0devsp2130" path="res://All_Scenes/enemy_turret_editable.tscn" id="2_6b0as"]
+[ext_resource type="PackedScene" uid="uid://d2pa0kg1hl6kx" path="res://All_Scenes/hanging_cloth_lantern.tscn" id="3_w06cl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_om7vk"]
 shader = ExtResource("1_iimck")
@@ -16,18 +18,31 @@ glow_enabled = true
 fog_mode = 1
 fog_density = 1.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
+volumetric_fog_density = 0.2
 volumetric_fog_albedo = Color(0.27022192, 0.27022192, 0.2702219, 1)
 volumetric_fog_length = 120.0
 
 [node name="Node3D" type="Node3D"]
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_75ld5")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8609594, 2.052804)
+[node name="Node3D" parent="." instance=ExtResource("3_w06cl")]
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -0.8542565, 0, 0.042995095)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2306266, 0, 0.094261646)
 light_color = Color(0.9999998, 0.59615, 0.33052522, 1)
+light_energy = 8.0
 shadow_enabled = true
+distance_fade_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.94013363, 3.3343216e-08, -0.34080616, -0.09883975, 0.9570213, -0.27265507, 0.32615882, 0.2900174, 0.899728, -2.1524892, -0.30796897, 5.9450617)
+
+[node name="Enemy_Turret" parent="." instance=ExtResource("2_6b0as")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0592, 0, 0.31623363)

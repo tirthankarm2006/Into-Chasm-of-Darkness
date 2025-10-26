@@ -14,6 +14,11 @@ config/name="Into Chasm of Darkness"
 run/main_scene="uid://3j1c31jgr3gv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+
 [dotnet]
 
 project/assembly_name="Into Chasm of Darkness"
