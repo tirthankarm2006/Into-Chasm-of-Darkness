@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://3j1c31jgr3gv"]
+
+[ext_resource type="Shader" uid="uid://cpqnse5l1drgi" path="res://All_Shaders/Sky1.gdshader" id="1_iimck"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_om7vk"]
+shader = ExtResource("1_iimck")
+
+[sub_resource type="Sky" id="Sky_om7vk"]
+sky_material = SubResource("ShaderMaterial_om7vk")
+
+[sub_resource type="Environment" id="Environment_75ld5"]
+background_mode = 2
+sky = SubResource("Sky_om7vk")
+tonemap_mode = 2
+glow_enabled = true
+fog_mode = 1
+fog_density = 1.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+volumetric_fog_albedo = Color(0.27022192, 0.27022192, 0.2702219, 1)
+volumetric_fog_length = 120.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_75ld5")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8609594, 2.052804)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.9999998, 0.59615, 0.33052522, 1)
+shadow_enabled = true
