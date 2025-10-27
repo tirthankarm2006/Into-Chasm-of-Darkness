@@ -3,6 +3,9 @@
 [ext_resource type="ArrayMesh" uid="uid://bbkbvetxhoidp" path="res://All_3D_Models/cloth_lantern.obj" id="1_5dbt6"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_5dbt6"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
 emission_enabled = true
 emission = Color(1, 0.59607846, 0.32941177, 1)
 emission_energy_multiplier = 4.0
@@ -21,3 +24,11 @@ backlight = Color(1, 0.59607846, 0.32941177, 1)
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 mesh = ExtResource("1_5dbt6")
 surface_material_override/0 = SubResource("ORMMaterial3D_5dbt6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.98039216, 0.69411767, 0, 1)
+light_energy = 3.0
+shadow_enabled = true
+shadow_opacity = 0.9
+omni_range = 8.0
+omni_attenuation = 0.0

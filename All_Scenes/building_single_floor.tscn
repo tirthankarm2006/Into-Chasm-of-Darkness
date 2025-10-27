@@ -1,3 +1,224 @@
-[gd_scene format=3 uid="uid://bvduijeaf1mv7"]
+[gd_scene load_steps=4 format=3 uid="uid://bvduijeaf1mv7"]
+
+[ext_resource type="PackedScene" uid="uid://m66ri06eable" path="res://All_3D_Models/Environment.fbx" id="1_8g6cp"]
+[ext_resource type="Shader" uid="uid://ced052xntbjui" path="res://All_Shaders/disable_cull_face.gdshader" id="2_knkhj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_acr7k"]
+render_priority = 0
+shader = ExtResource("2_knkhj")
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Above" type="Node3D" parent="."]
+
+[node name="Environment" parent="Above" instance=ExtResource("1_8g6cp")]
+
+[node name="Builfding" parent="Above/Environment" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment2" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Builfding" parent="Above/Environment2" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment3" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="Builfding" parent="Above/Environment3" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment4" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
+
+[node name="Builfding" parent="Above/Environment4" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment5" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
+
+[node name="Builfding" parent="Above/Environment5" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment6" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="Builfding" parent="Above/Environment6" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment7" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 0)
+
+[node name="Builfding" parent="Above/Environment7" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment8" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 0)
+
+[node name="Builfding" parent="Above/Environment8" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment9" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 0)
+
+[node name="Builfding" parent="Above/Environment9" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment10" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36, 0)
+
+[node name="Builfding" parent="Above/Environment10" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment11" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 0)
+
+[node name="Builfding" parent="Above/Environment11" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment12" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 0)
+
+[node name="Builfding" parent="Above/Environment12" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment13" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48, 0)
+
+[node name="Builfding" parent="Above/Environment13" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment14" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52, 0)
+
+[node name="Builfding" parent="Above/Environment14" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment15" parent="Above" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, 0)
+
+[node name="Builfding" parent="Above/Environment15" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Above2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -56, 0)
+
+[node name="Environment" parent="Above2" instance=ExtResource("1_8g6cp")]
+
+[node name="Builfding" parent="Above2/Environment" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment2" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="Builfding" parent="Above2/Environment2" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment3" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+
+[node name="Builfding" parent="Above2/Environment3" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment4" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
+
+[node name="Builfding" parent="Above2/Environment4" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment5" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
+
+[node name="Builfding" parent="Above2/Environment5" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment6" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+
+[node name="Builfding" parent="Above2/Environment6" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment7" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 0)
+
+[node name="Builfding" parent="Above2/Environment7" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment8" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, 0)
+
+[node name="Builfding" parent="Above2/Environment8" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment9" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, 0)
+
+[node name="Builfding" parent="Above2/Environment9" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment10" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36, 0)
+
+[node name="Builfding" parent="Above2/Environment10" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment11" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, 0)
+
+[node name="Builfding" parent="Above2/Environment11" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment12" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 0)
+
+[node name="Builfding" parent="Above2/Environment12" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment13" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48, 0)
+
+[node name="Builfding" parent="Above2/Environment13" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment14" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52, 0)
+
+[node name="Builfding" parent="Above2/Environment14" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[node name="Environment15" parent="Above2" instance=ExtResource("1_8g6cp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 56, 0)
+
+[node name="Builfding" parent="Above2/Environment15" index="1"]
+surface_material_override/0 = SubResource("ShaderMaterial_acr7k")
+
+[editable path="Above/Environment"]
+[editable path="Above/Environment2"]
+[editable path="Above/Environment3"]
+[editable path="Above/Environment4"]
+[editable path="Above/Environment5"]
+[editable path="Above/Environment6"]
+[editable path="Above/Environment7"]
+[editable path="Above/Environment8"]
+[editable path="Above/Environment9"]
+[editable path="Above/Environment10"]
+[editable path="Above/Environment11"]
+[editable path="Above/Environment12"]
+[editable path="Above/Environment13"]
+[editable path="Above/Environment14"]
+[editable path="Above/Environment15"]
+[editable path="Above2/Environment"]
+[editable path="Above2/Environment2"]
+[editable path="Above2/Environment3"]
+[editable path="Above2/Environment4"]
+[editable path="Above2/Environment5"]
+[editable path="Above2/Environment6"]
+[editable path="Above2/Environment7"]
+[editable path="Above2/Environment8"]
+[editable path="Above2/Environment9"]
+[editable path="Above2/Environment10"]
+[editable path="Above2/Environment11"]
+[editable path="Above2/Environment12"]
+[editable path="Above2/Environment13"]
+[editable path="Above2/Environment14"]
+[editable path="Above2/Environment15"]

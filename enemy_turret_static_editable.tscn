@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv6qsxtjag2at"]
+
+[ext_resource type="PackedScene" uid="uid://cj72ve2ff4li3" path="res://All_3D_Models/Enemy_Turret_Static.fbx" id="1_s4v1h"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Enemy_Turret_Static" parent="." instance=ExtResource("1_s4v1h")]
+
+[node name="Cylinder_001" parent="Enemy_Turret_Static" index="1"]
+transform = Transform3D(-18.812984, 0, -1.6446834e-06, 0, 18.812984, 0, 1.6446834e-06, 0, -18.812984, 0, 1.5138093, -0.8706547)
+
+[editable path="Enemy_Turret_Static"]

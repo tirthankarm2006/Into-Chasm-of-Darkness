@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://3j1c31jgr3gv"]
+[gd_scene load_steps=9 format=3 uid="uid://3j1c31jgr3gv"]
 
 [ext_resource type="Shader" uid="uid://cpqnse5l1drgi" path="res://All_Shaders/Sky1.gdshader" id="1_iimck"]
 [ext_resource type="PackedScene" uid="uid://dpj0devsp2130" path="res://All_Scenes/enemy_turret_editable.tscn" id="2_6b0as"]
 [ext_resource type="PackedScene" uid="uid://d2pa0kg1hl6kx" path="res://All_Scenes/hanging_cloth_lantern.tscn" id="3_w06cl"]
+[ext_resource type="PackedScene" uid="uid://bvduijeaf1mv7" path="res://All_Scenes/building_single_floor.tscn" id="4_aerqg"]
+[ext_resource type="PackedScene" uid="uid://bv6qsxtjag2at" path="res://enemy_turret_static_editable.tscn" id="5_qp70f"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_om7vk"]
 shader = ExtResource("1_iimck")
@@ -15,34 +17,45 @@ background_mode = 2
 sky = SubResource("Sky_om7vk")
 tonemap_mode = 2
 glow_enabled = true
-fog_mode = 1
-fog_density = 1.0
+fog_enabled = true
+fog_light_color = Color(0.111963205, 0.12781867, 0.14684415, 1)
+fog_density = 0.04
+fog_depth_begin = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.1
+volumetric_fog_density = 0.12
 volumetric_fog_albedo = Color(0.27022192, 0.27022192, 0.2702219, 1)
+volumetric_fog_emission = Color(0.103743516, 0.10374353, 0.103743516, 1)
 volumetric_fog_length = 120.0
 
 [node name="Node3D" type="Node3D"]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2306266, 0, 0.094261646)
-light_color = Color(0.9999998, 0.59615, 0.33052522, 1)
-light_energy = 8.0
-shadow_enabled = true
-distance_fade_enabled = true
-
-[node name="Node3D" parent="." instance=ExtResource("3_w06cl")]
-transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -0.8542565, 0, 0.042995095)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 5.6948385, 5.71307, -14.571158)
+light_energy = 0.3
 shadow_enabled = true
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.94013363, 1.9334136e-08, -0.34080622, -0.09883975, 0.9570214, -0.27265513, 0.32615882, 0.29001743, 0.899728, -2.1524892, -0.30796897, 5.9450617)
+shadow_reverse_cull_face = true
+shadow_opacity = 0.8
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_75ld5")
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.6524291, 0, -0.7578498, 0, 1, 0, 0.7578498, 0, -0.65242904, -26.610912, 0.707217, 15.945061)
+
+[node name="hanging_cloth_lantern" parent="." instance=ExtResource("3_w06cl")]
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -14.241618, 2.0285366, 22.588755)
+
+[node name="hanging_cloth_lantern2" parent="." instance=ExtResource("3_w06cl")]
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -4.8652105, 4.071476, 17.849281)
+
 [node name="Enemy_Turret" parent="." instance=ExtResource("2_6b0as")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0592, 0, 0.31623363)
+transform = Transform3D(-0.51376593, 0, -0.85793054, 0, 1, 0, 0.85793054, 0, -0.51376593, -16.460121, 0, 27.069408)
+
+[node name="building_single_floor" parent="." instance=ExtResource("4_aerqg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5470304, 0.3880186, 22.439127)
+
+[node name="building_single_floor2" parent="." instance=ExtResource("4_aerqg")]
+transform = Transform3D(-0.31907514, 0, 0.9477294, 0, 1, 0, -0.9477294, 0, -0.31907514, -29.109062, 0.3880186, 22.439127)
+
+[node name="Enemy_Turret_Static" parent="." instance=ExtResource("5_qp70f")]
+transform = Transform3D(-0.7941133, 0, -0.09687188, 0, 0.8, 0, 0.09687188, 0, -0.7941133, -3.667512, 1.1200948, 17.554544)

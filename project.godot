@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Into Chasm of Darkness"
+config/name="In The Chasm of Darkness"
 run/main_scene="uid://3j1c31jgr3gv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 

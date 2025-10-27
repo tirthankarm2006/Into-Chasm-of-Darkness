@@ -12,9 +12,13 @@ shader = ExtResource("2_bmj7r")
 render_priority = 0
 shader = ExtResource("2_bmj7r")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_c07i2"]
-render_priority = 0
-shader = ExtResource("2_bmj7r")
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_j8blh"]
+emission_enabled = true
+emission = Color(0.9815763, 0.41902584, 0, 1)
+emission_energy_multiplier = 4.5
+subsurf_scatter_strength = 0.35
+subsurf_scatter_transmittance_color = Color(0.98039216, 0.41960785, 0, 1)
+backlight = Color(0.98039216, 0.41960785, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c07i2"]
 albedo_texture = ExtResource("3_j8blh")
@@ -36,7 +40,7 @@ surface_material_override/0 = SubResource("ShaderMaterial_j8blh")
 surface_material_override/0 = SubResource("ShaderMaterial_bmj7r")
 
 [node name="Cube" parent="." index="2"]
-surface_material_override/0 = SubResource("ShaderMaterial_c07i2")
+surface_material_override/0 = SubResource("ORMMaterial3D_j8blh")
 
 [node name="Cube_001" parent="." index="3"]
 material_override = SubResource("StandardMaterial3D_c07i2")
@@ -44,3 +48,13 @@ surface_material_override/0 = SubResource("ShaderMaterial_asea5")
 
 [node name="Plane" parent="." index="11"]
 surface_material_override/0 = SubResource("ShaderMaterial_0lr3w")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="12"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.48969, 1.0429504)
+light_color = Color(0.98039216, 0.8039216, 0, 1)
+light_energy = 2.0
+shadow_enabled = true
+shadow_opacity = 0.95
+spot_range = 30.0
+spot_attenuation = 0.0
+spot_angle = 15.0
