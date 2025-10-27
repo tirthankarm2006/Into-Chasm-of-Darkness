@@ -22,6 +22,7 @@ backlight = Color(1, 0.59607846, 0.32941177, 1)
 
 [node name="ClothLantern" type="MeshInstance3D" parent="."]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+transparency = 0.4
 mesh = ExtResource("1_5dbt6")
 surface_material_override/0 = SubResource("ORMMaterial3D_5dbt6")
 
