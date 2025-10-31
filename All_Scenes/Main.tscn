@@ -3,7 +3,7 @@
 [ext_resource type="Shader" uid="uid://cpqnse5l1drgi" path="res://All_Shaders/Sky1.gdshader" id="1_iimck"]
 [ext_resource type="PackedScene" uid="uid://dpj0devsp2130" path="res://All_Scenes/enemy_turret_editable.tscn" id="2_6b0as"]
 [ext_resource type="PackedScene" uid="uid://d2pa0kg1hl6kx" path="res://All_Scenes/hanging_cloth_lantern.tscn" id="3_w06cl"]
-[ext_resource type="PackedScene" uid="uid://bvduijeaf1mv7" path="res://All_Scenes/building_single_floor.tscn" id="4_aerqg"]
+[ext_resource type="PackedScene" uid="uid://bvduijeaf1mv7" path="res://All_Scenes/building_entire.tscn" id="4_aerqg"]
 [ext_resource type="PackedScene" uid="uid://bv6qsxtjag2at" path="res://All_Scenes/enemy_turret_static_editable.tscn" id="5_qp70f"]
 [ext_resource type="PackedScene" uid="uid://cj0nrqw6nome2" path="res://All_Scenes/player.tscn" id="7_c286v"]
 
@@ -18,7 +18,6 @@ background_mode = 2
 sky = SubResource("Sky_om7vk")
 tonemap_mode = 2
 glow_enabled = true
-fog_enabled = true
 fog_light_color = Color(0.111963205, 0.12781867, 0.14684415, 1)
 fog_density = 0.04
 fog_depth_begin = 0.0
@@ -44,6 +43,9 @@ directional_shadow_blend_splits = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_75ld5")
 
+[node name="Player" parent="." instance=ExtResource("7_c286v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20746946, 6.0007257, 26.01322)
+
 [node name="All_Buildings" type="Node3D" parent="."]
 
 [node name="building_1" parent="All_Buildings" instance=ExtResource("4_aerqg")]
@@ -67,7 +69,19 @@ transform = Transform3D(-0.31907514, 0, 0.9477294, 0, 1, 0, -0.9477294, 0, -0.31
 [node name="All_Lanterns" type="Node3D" parent="."]
 
 [node name="cloth_lantern1" parent="All_Lanterns" instance=ExtResource("3_w06cl")]
-transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -8.508257, 8.683006, 31.549461)
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -26.230658, 19.492138, 31.549461)
+
+[node name="cloth_lantern3" parent="All_Lanterns" instance=ExtResource("3_w06cl")]
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -20.31267, 21.68877, 16.908142)
+
+[node name="cloth_lantern4" parent="All_Lanterns" instance=ExtResource("3_w06cl")]
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -6.543293, 16.32055, 42.867935)
+
+[node name="cloth_lantern5" parent="All_Lanterns" instance=ExtResource("3_w06cl")]
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -8.508257, 10.31344, 31.549461)
+
+[node name="cloth_lantern6" parent="All_Lanterns" instance=ExtResource("3_w06cl")]
+transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -18.927568, 8.683006, 48.36559)
 
 [node name="cloth_lantern2" parent="All_Lanterns" instance=ExtResource("3_w06cl")]
 transform = Transform3D(0.13723709, 0, 0.99053836, 0, 1, 0, -0.99053836, 0, 0.13723709, -13.622502, 8.882796, 8.271483)
@@ -77,6 +91,3 @@ transform = Transform3D(-0.7941133, 0, -0.09687188, 0, 0.8, 0, 0.09687188, 0, -0
 
 [node name="Enemy_Turret" parent="." instance=ExtResource("2_6b0as")]
 transform = Transform3D(-0.51376593, 0, -0.85793054, 0, 1, 0, 0.85793054, 0, -0.51376593, -16.460121, 0, 27.069408)
-
-[node name="Player" parent="." instance=ExtResource("7_c286v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20746946, 6.0007257, 26.01322)
