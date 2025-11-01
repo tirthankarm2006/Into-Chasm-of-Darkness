@@ -219,6 +219,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [node name="Player" type="CharacterBody3D"]
+disable_mode = 2
 script = ExtResource("1_wrnd7")
 
 [node name="Body_collider" type="CollisionShape3D" parent="."]
