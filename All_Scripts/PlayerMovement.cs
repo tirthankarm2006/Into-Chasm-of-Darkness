@@ -8,7 +8,8 @@ public partial class PlayerMovement : CharacterBody3D
 	public const float Gravity = 300f;
 	float JumpBoost = JumpVelocity;
 	bool IsJumping = false;
-	public float MouseSensitivity = 0.5f;
+	public float MouseSensitivity = 0.3f;
+
 	Node3D cameraPivot;
 
 
@@ -23,14 +24,18 @@ public partial class PlayerMovement : CharacterBody3D
     {
         if (@event is InputEventMouseMotion mouseMotion)
 		{
-            this.RotateY(-Mathf.DegToRad(mouseMotion.Relative.X * MouseSensitivity));
+            RotateY(-Mathf.DegToRad(mouseMotion.Relative.X * MouseSensitivity));
 
             float pitchChange = -mouseMotion.Relative.Y * MouseSensitivity;
-            cameraPivot.RotateX(Mathf.DegToRad(pitchChange));
+			cameraPivot.RotateX(Mathf.DegToRad(pitchChange));
 
-            Vector3 rot = cameraPivot.RotationDegrees;
-            rot.X = Mathf.Clamp(rot.X, -89, 89);
-            cameraPivot.RotationDegrees = rot;
+			float rotx = cameraPivot.RotationDegrees.X;
+			if (Math.Abs(rotx) > 89) rotx = Math.Sign(rotx) * 89;
+			cameraPivot.RotationDegrees = new Vector3(rotx, cameraPivot.RotationDegrees.Y, cameraPivot.RotationDegrees.Z);
+
+			// Vector3 rot = cameraPivot.RotationDegrees;
+            // rot.X = Mathf.Clamp(rot.X, -89, 89);
+            // cameraPivot.RotationDegrees = rot;
         }
     }
 
