@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bp0gj7x0jf7ac"]
+
+[ext_resource type="PackedScene" uid="uid://bqp32hwpa7oax" path="res://All_3D_Models/Y Bot.fbx" id="1_4n6lo"]
+
+[node name="Y Bot" instance=ExtResource("1_4n6lo")]
+
+[node name="Skeleton3D" parent="." index="0"]
+bones/8/rotation = Quaternion(-0.010451819, -0.0010627186, 0.10115047, 0.99481565)
+bones/27/rotation = Quaternion(2.8521122e-06, -3.0577734e-09, 0.0001410514, 1)
+bones/28/rotation = Quaternion(-5.954488e-06, 2.1905608e-09, -0.000367884, 0.99999994)
+bones/29/rotation = Quaternion(3.6591703e-06, 8.409115e-10, 0.00022980936, 1)
+bones/52/rotation = Quaternion(-2.0940528e-21, 0, 1.0394375e-05, 1)
+bones/53/rotation = Quaternion(1.0671668e-21, 0, -1.0428465e-05, 1)
